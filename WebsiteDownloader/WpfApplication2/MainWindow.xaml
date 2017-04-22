@@ -1,0 +1,70 @@
+﻿<Window x:Class="WpfApplication2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Archive Downloader" Height="426" Width="525" Closing="Window_Closing" ResizeMode="CanMinimize" Loaded="Window_Loaded">
+    <DockPanel>
+        <ToolBar DockPanel.Dock="Top">
+            <Button Click="Button_View_Log_Click">VIEW LOG</Button>
+        </ToolBar>
+        <StackPanel>
+            <GroupBox Margin="10" Padding="10" Header="Save website from archive.org">
+                <StackPanel>
+                    <DockPanel>
+                        <Label HorizontalAlignment="Left" Width="100">URL</Label>
+                        <TextBox Text="" Name="TextBox_Url" HorizontalAlignment="Left" Width="300"></TextBox>
+                    </DockPanel>
+                    <DockPanel>
+                        <Label HorizontalAlignment="Left" Width="100">Time Stamp</Label>
+                        <TextBox Text="" Name="TextBox_Timestamp" HorizontalAlignment="Left" Width="100"></TextBox>
+                    </DockPanel>
+
+                    <DockPanel>
+                        <Label HorizontalAlignment="Left" Width="100"># Connections</Label>
+                        <TextBox Text="10" Name="TextBox_Count_Connections" HorizontalAlignment="Left" Width="40" TextChanged="TextBox_Count_Connections_TextChanged"></TextBox>
+                    </DockPanel>
+
+                    <DockPanel>
+                        <Label HorizontalAlignment="Left" Width="100">Encoding</Label>
+                        <ComboBox Name="ComboBox_Encoding" HorizontalAlignment="Left" Width="180">
+                        
+                        </ComboBox>
+                    </DockPanel>
+
+                    <DockPanel>
+                        <Label HorizontalAlignment="Left" Width="100">Save Path</Label>
+                        <TextBox Text="" Name="TextBox_SavePath" HorizontalAlignment="Left" Width="300"></TextBox>
+                        <Button HorizontalAlignment="Left" Name="Button_Browse" Click="Button_Browse_Click">BROWSE</Button>
+                    </DockPanel>
+                    
+                    <DockPanel>
+                        <Button Margin="0, 0, 10, 0" HorizontalAlignment="Left" Name="Button_Download" Click="Button_Download_Click">DOWNLOAD</Button>
+                        <Button HorizontalAlignment="Left" IsEnabled="False" Name="Button_Stop_Download" Click="Button_Stop_Download_Click">STOP DOWNLOAD</Button>
+                    </DockPanel>
+                </StackPanel>
+            </GroupBox>
+            
+            <GroupBox Padding="10" Margin="10" Header="Status" Name="GroupBox_Status" Width="280" HorizontalAlignment="Left">
+                <StackPanel>
+                    <DockPanel>
+                        <Label Width="140"># Pages Downloading:</Label>
+                        <Label Name="Label_Count_Downloading_Pages">0</Label>
+                    </DockPanel>
+                    <DockPanel>
+                        <Label Width="140"># Pages Downloaded:</Label>
+                        <Label Name="Label_Count_Downloaded_Pages">0</Label>
+                    </DockPanel>
+
+                    <DockPanel>
+                        <Label Width="140"># Pages Queued:</Label>
+                        <Label Name="Label_Count_Queued_Pages">0</Label>
+                    </DockPanel>
+
+                    <DockPanel>
+                        <Label Width="140"># Failed Downloads:</Label>
+                        <Label Name="Label_Count_Failed_Downloads">0</Label>
+                    </DockPanel>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+    </DockPanel>
+</Window>

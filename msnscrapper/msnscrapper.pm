@@ -23,8 +23,10 @@ sub Parse {
 		if($tmpIndex == -1) {
 			print "needle [$needle] not found\r\n";
 			last;
+		
 		}
 		
+		#get the result URL
 		$index = $tmpIndex + length($needle);
 		$needle = "<a href=\"";
 		$tmpIndex = index($self->{data}, $needle, $index);
@@ -48,6 +50,17 @@ sub Parse {
 		
 		my $href = substr($self->{data}, $beginExtractIndex, $endExtractIndex - $beginExtractIndex);
 		print "$href\r\n";
+		
+		#get the result text
+		$needle = ">";
+		$tmpIndex = index($self->{data}, $needle, $index);
+		if($tmpIndex == -1) {
+			print "needle [$needle] not found";
+			last;
+		}
+		
+		$index = $tmpIndex + length($needle);
+		$beginExtractIndex = $index;
 	}
 }
 
