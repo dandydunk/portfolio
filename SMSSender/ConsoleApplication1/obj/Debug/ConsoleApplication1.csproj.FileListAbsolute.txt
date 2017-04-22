@@ -1,0 +1,6 @@
+E:\software\clients\scott\SMSSender\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+E:\software\clients\scott\SMSSender\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+E:\software\clients\scott\SMSSender\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+E:\software\clients\scott\SMSSender\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+E:\software\clients\scott\SMSSender\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+E:\software\clients\scott\SMSSender\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
