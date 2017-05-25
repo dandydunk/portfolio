@@ -1,0 +1,13 @@
+﻿* page to add new project
+**button save
+***webservice post save project
+***
+* page to view projects
+**data grid
+**web service get projects
+**save projects into data grid
+* page to edit projects
+* page to start working on project\
+* main page
+**list projects
+**button new project
