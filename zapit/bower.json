@@ -1,0 +1,18 @@
+{
+  "name": "capit",
+  "homepage": "https://github.com/dandydunk/portfolio",
+  "authors": [
+    "deymack <macollins2012@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/components",
+    "test",
+    "tests"
+  ]
+}
