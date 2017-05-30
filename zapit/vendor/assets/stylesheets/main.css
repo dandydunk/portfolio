@@ -1,5 +1,59 @@
+* {
+	color:white;
+}
+body {
+	background-color: #241F2B;
+}
+
+.header {
+	background-color:#150C21;
+	margin-bottom:10px;
+}
+
+.logo a {
+	color:#80BE40;
+	font-size:2em;
+}
+
+a {
+	color:#B93E69;
+	font-weight:bold;
+	font-size:1.3em;
+}
+
+
 #menuSession li {
 	float:left;
 	overflow:hidden;
 	margin-right:10px;
+	list-style-type:none;
+}
+
+.auction {
+	background:linear-gradient(#342F3C, #473D58);
+	border-radius:10px;
+	box-shadow: 5px 5px #535641;
+}
+
+.auction li {
+	list-style-type:none;
+}
+
+.loginPanel {
+	background-color:#150C21;
+	padding:20px;
+}
+
+.loginPanel input {
+	margin-bottom:10px;
+}
+
+.textField {
+	background-color:#4C3A4D;
+	border:0px;
+	color:white;
+	width:100%;
+	height:50px;
+	border-radius:10px;
+	border:thin solid #391B25;
 }

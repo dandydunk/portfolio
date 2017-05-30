@@ -1,71 +1,13 @@
-<div class="row">
-	<list-phones></list-phones>
-	<!--
-	<div class="col-lg-3">
-		<ul>
-			<li>Auction Title</li>
+<div class="row" ng-controller="ControllerListAuctions">
+	<div class="col-lg-3" ng-repeat="auction in auctions">
+		<ul class="auction">
+			<li class="auctionTitle">{{auction.title}}</li>
 			<li><img src="" width="200" height="200"></li>
-			<li>$100</li>
-			<li>3 days remaining</li>
+			<li class="auctionPrice">{{auction.price}}</li>
+			<li class="auctionDuration">{{auction.remainingTime}} remaining</li>
 			<li><a href="#">Bid</a></li>
 			<li><a href="#">Watch</a></li>
 		</ul>
 	</div>
-	
-	<div class="col-lg-3">
-		<ul>
-			<li>Auction Title</li>
-			<li><img src="" width="200" height="200"></li>
-			<li>$100</li>
-			<li>3 days remaining</li>
-			<li><a href="#">Bid</a></li>
-			<li><a href="#">Watch</a></li>
-		</ul>
-	</div>
-	
-	<div class="col-lg-3">
-		<ul>
-			<li>Auction Title</li>
-			<li><img src="" width="200" height="200"></li>
-			<li>$100</li>
-			<li>3 days remaining</li>
-			<li><a href="#">Bid</a></li>
-			<li><a href="#">Watch</a></li>
-		</ul>
-	</div>
-
-	<div class="col-lg-3">
-		<ul>
-			<li>Auction Title</li>
-			<li><img src="" width="200" height="200"></li>
-			<li>$100</li>
-			<li>3 days remaining</li>
-			<li><a href="#">Bid</a></li>
-			<li><a href="#">Watch</a></li>
-		</ul>
-	</div>
-	
-	<div class="col-lg-3">
-		<ul>
-			<li>Auction Title</li>
-			<li><img src="" width="200" height="200"></li>
-			<li>$100</li>
-			<li>3 days remaining</li>
-			<li><a href="#">Bid</a></li>
-			<li><a href="#">Watch</a></li>
-		</ul>
-	</div>
-	
-	<div class="col-lg-3">
-		<ul>
-			<li>Auction Title</li>
-			<li><img src="" width="200" height="200"></li>
-			<li>$100</li>
-			<li>3 days remaining</li>
-			<li><a href="#">Bid</a></li>
-			<li><a href="#">Watch</a></li>
-		</ul>
-	</div>
-	-->
 </div>
 
