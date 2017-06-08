@@ -1,0 +1,2 @@
+class InventoryPicture < ApplicationRecord
+end

@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-lg-12">
+    <table>
+      <tr>
+        <th>Rental Date</th>
+        <th>Due Date</th>
+        <th>Title</th>
+      </tr>
+    <%= @rentals.each do |rental| %>
+      <tr>
+        <td><%= rental.created_at %></td>
+        <td><%= rental.dueDate %></td>
+        <td><%= rental.title %></td>
+      </tr>
+    <%= end %>
+    </table>
+  </div>
+</div>

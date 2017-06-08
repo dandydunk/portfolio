@@ -1,0 +1,153 @@
+<script>
+    $(document).ready(function(){
+        $("#buttonSave").click(function(){
+            $(this).attr("disabled", "disabled");
+            var self = $(this);
+            var data = {};
+            var ajax = $.post("/inventory/newPost", data, function(data){
+                if(data.error) {
+                    alert(data.error);
+                }
+
+                $(self).removeAttr("disabled");
+            }, "json");
+
+            ajax.fail(function(){
+                alert("ajax failed.");
+                $(self).removeAttr("disabled");
+            });
+        });
+    });
+
+    var loadingPictures = 0;
+    function ManagePictures(id) {
+        if(loadingPictures) return;
+
+        loadingPictures = 1;
+        var ajax = $.get("/inventory/getPictures/"+id, null,
+              function(picture){
+                  var html = "";
+                for(var i = 0; i < picture.length; i++) {
+                    html += "<div class='col-lg-3'><img src='"+picture[i].path+"' width='200' /></div>";
+                }
+
+                $("#picturesHolder").html(html);
+                $("#modalManagePictures").modal();
+                loadingPictures = 0;
+              }, "json");
+    }
+
+</script>
+
+
+<div class="row">
+  <div class="col-lg-12">
+    <h1>Manage Inventory</h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modalNewInventory">New</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <table style="width:100%" class="table">
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>&nbsp;</th>
+        <th>&nbsp;</th>
+        <th>&nbsp;</th>
+      </tr>
+
+      <% @inventories.each do |inventory| %>
+      <tr>
+        <td><%= inventory.number %></td>
+        <td><%= inventory.name %></td>
+        <td><a href="javascript:void(0)" onclick="Edit(<%= inventory.id %>)">Edit</a></td>
+        <td><a href="javascript:void(0)" onclick="ManagePictures(<%= inventory.id %>)">Manage Pictures</a></td>
+        <td><a href="javascript:void(0)" onclick="Delete(<%= inventory.id %>)">Delete</a></td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+
+
+
+<!-- Modal -->
+<div id="modalNewInventory" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">New</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="newInventoryPanel" style="margin:0 auto; width:50%;">
+              <div class="row">
+                <div class="col-lg-12">
+                  <input type="text" placeholder="Title" id="title" class="textField">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-12">
+                  <select>
+                    <% List() { |cat,level| %>
+                        <option>
+                          <% level.times do |l|%>
+                              &nbsp;
+                          <% end %>
+
+                          <%= cat.name %></option>
+                    <% } %>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-2">
+                  <button class="btn btn-default" id="buttonSave">Save</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div id="modalManagePictures" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Manage Pictures</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row" id="picturesHolder">
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+</div>
