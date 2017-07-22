@@ -1,0 +1,206 @@
+extends ./layout.jade
+
+block content
+	script.
+		function Click_SetPaid() {
+			var rows = $("#grid_shift_history").jqGrid('getGridParam','selarrrow');
+			console.log("rows", rows);
+			for(var i = 0; i < rows.length; i++) {
+				var time_card_id = rows[i];
+				console.log("got time card id", time_card_id);
+				var ajax = $.ajax({
+						url:"/employee/paid_time_card/"+time_card_id,
+						accepts:"json",
+					});
+
+					ajax.fail(function(){
+						alert("ajax failed");
+					});
+
+					ajax.done(function(data){
+						if(data.error) {
+							alert("error: "+data.error);
+						}
+
+						else {
+							console.log("paid");
+							location.href = location.href;
+						}
+					});
+			}
+		}
+
+		function Click_ShowHidden() {
+
+		}
+		$(document).ready(function(){
+			$("#timecard_report_input_start_date").datepicker();
+			$("#timecard_report_input_end_date").datepicker();
+
+			$("#grid_timecard_report").jqGrid({
+		        url: "/staff/get_total_hours_by_location",
+		        datatype: "json",
+		        mtype: "GET",
+		        colNames: ["User ID", "First Name", "Last Name", "Location", "Total Hours"],
+		        colModel: [
+		        	{ name: "user_id", hidden:true },
+		        	{ name: "first_name" },
+		        	{ name: "last_name" },
+		            { name: "location" },
+		            { name: "total_hours" }
+		        ],
+		        pager: "#pager_grid_timecard_report",
+		        rowNum: 10,
+		        rowList: [10, 20, 30],
+		        sortable:true,
+		        sortname: "first_name",
+		        sortorder: "desc",
+		        viewrecords: true,
+		        gridview: true,
+		        autoencode: true,
+		        caption: "Staff Timecards",
+		        autowidth:true
+		    });
+
+		    $("#grid_open_timecards").jqGrid({
+		        url: "/staff/get_open_time_cards",
+		        datatype: "json",
+		        mtype: "GET",
+		        colNames: ["First Name", "Last Name", "Location", "Clock In Time/Date"],
+		        colModel: [
+		        	{ name: "first_name" },
+		        	{ name: "last_name"},
+		            { name: "location" },
+		            { name: "clock_in_time_date" }
+		        ],
+		        pager: "#pager_grid_open_timecards",
+		        rowNum: 10,
+		        rowList: [10, 20, 30],
+		        sortable:true,
+		        sortname: "location",
+		        sortorder: "desc",
+		        viewrecords: true,
+		        gridview: true,
+		        autoencode: true,
+		        caption: "Open Timecards",
+		        autowidth:true
+		    });
+
+		    $("#grid_shift_history").jqGrid({
+		        url: "/staff/get_shift_history",
+		        multiselect: true,
+		        datatype: "json",
+		        mtype: "GET",
+		        colNames: ["First Name", "Last Name", "Clock In Location", "Clock In Time/Date", "Clock Out Location", "Clock Out Time/Date"],
+		        colModel: [
+		        	{ name: "first_name" },
+		        	{ name: "last_name" },
+		        	{ name: "clock_in_location" },
+		        	{ name: "clock_in_time_date" },
+		            { name: "clock_out_location" },
+		            {name:"clock_out_time_date"}
+		            
+		        ],
+		        pager: "#pager_grid_shift_history",
+		        rowNum: 10,
+		        rowList: [10, 20, 30],
+		        sortable:true,
+		        viewrecords: true,
+		        gridview: true,
+		        autoencode: true,
+		        caption: "Shift History",
+		        autowidth:true
+		    });
+
+		    $("#button_show_hidden").click(function(){
+		    	$(this).attr("disabled", "disabled");
+
+				var url = "/staff/get_shift_history"
+				url += "?show_paid=1&start_date="+escape($("#input_start_date").val());
+						    	url += "&end_date="+escape($("#input_end_date").val());
+						    	url += "&find_user="+escape($("#sb_employees").val());
+						    	console.log("reloading url", url);
+				$("#grid_shift_history").jqGrid("setGridParam", {url:url}).trigger("reloadGrid");
+				$(this).removeAttr("disabled");
+		    });
+
+		    $("#button_filter").click(function(){
+		    	$(this).attr("disabled", "disabled");
+
+		    	var active_tab = $("ul#report_tabs li.active a").attr("aria-controls");
+		    	var url = "";
+		    	var grid = "";
+		    	if(active_tab == "timecard_report") {
+		    		url = "/staff/get_total_hours_by_location";
+		    		grid = $("#grid_timecard_report");
+		    	}
+
+		    	else if(active_tab == "open_timecards") {
+		    		url = "/staff/get_open_time_cards";
+		    		grid = $("#grid_open_timecards");
+		    	}
+
+		    	else if(active_tab == "view_shift_history") {
+		    		url = "/staff/get_shift_history"
+		    		grid = $("#grid_shift_history");
+		    	}
+
+		    	url += "?start_date="+escape($("#input_start_date").val());
+		    	url += "&end_date="+escape($("#input_end_date").val());
+		    	url += "&find_user="+escape($("#sb_employees").val());
+
+		    	console.log("reloading url", url);
+		    	$(grid).jqGrid("setGridParam", {url:url}).trigger("reloadGrid");
+		    	$(this).removeAttr("disabled");
+		    });
+		});
+
+	div(role='tabpanel')
+		div
+			select#sb_employees(class="form-control", style="width:200px")
+				option(value="") Filter by User
+				-for(var i = 0; i < users.length; i++)
+					-var user = users[i]._id;
+					option(value=user.id) #{user.first_name} #{user.last_name}
+			div
+				label Start Date
+				input(type="text", class="form-control", style="width:200px")#input_start_date
+
+			div
+				label End Date
+				input(type="text", class="form-control", style="width:200px")#input_end_date
+
+			div
+				input(type="button", value="Filter", class="btn btn-default")#button_filter
+
+		ul.nav.nav-tabs(role='tablist')#report_tabs
+			li.active(role='presentation')
+				a(href='#timecard_report', aria-controls='timecard_report', role='tab', data-toggle='tab') Timecard Report
+			
+			li(role='presentation')
+				a(href='#open_timecards', aria-controls='open_timecards', role='tab', data-toggle='tab') Open Timecards
+			
+			li(role='presentation')
+				a(href='#view_shift_history', aria-controls='view_shift_history', role='tab', data-toggle='tab') View Shift History
+			
+		.tab-content
+			#timecard_report.tab-pane.active(role='tabpanel')
+				table#grid_timecard_report
+					tr
+						td
+				#pager_grid_timecard_report
+			
+			#open_timecards.tab-pane(role='tabpanel')
+				table#grid_open_timecards
+					tr
+						td
+				#pager_grid_open_timecards
+
+			#view_shift_history.tab-pane(role='tabpanel')
+				div
+					input(type="button", onclick="Click_SetPaid()", value="SET PAID")
+					input(type="button", onclick="Click_ShowHidden", value="SHOW HIDDEN")#button_show_hidden
+				table#grid_shift_history
+					tr
+						td
+				#pager_grid_shift_history

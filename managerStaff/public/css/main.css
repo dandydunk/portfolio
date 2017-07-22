@@ -1,0 +1,35 @@
+.block{
+	display:block;
+}
+
+#bread_crumbs a {
+	overflow:hidden;
+}
+
+#bread_crumbs a {
+	float:left;
+	display:inline-block;
+	text-decoration: none;
+	font-weight: bold;
+	text-align:center;
+}
+
+#bread_crumbs span {
+	float:left;
+	margin: 0 10px;
+}
+
+#bread_crumbs {
+	margin: 20px 0px;
+}
+
+#main_container {
+}
+
+#login_containier {
+	background-color:black;
+	margin:0 auto;
+	border:thin solid red;
+	width:100%;
+}
+

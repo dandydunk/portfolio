@@ -1,0 +1,39 @@
+extends ./layout.jade
+
+block content
+	.col-xs-6
+		form(action="/employee/save", method="post")
+			.form-group
+				label First Name
+				input.form-control(type="text", name="first_name", placeholder="first name", value=user.first_name)#first_name
+			.form-group
+				label Last Name
+				input.form-control(type="text", name="last_name", placeholder="last name", value=user.last_name)#last_name
+			.form-group
+				label Email
+				input.form-control(type="text", name="email", placeholder="email", value=user.email)#email
+			.form-group
+				label Password
+				input.form-control(type="text", name="password", placeholder="password", value=user.password)#password
+			.form-group
+				label Date Hired
+				input.form-control(type="text", name="date_hired", placeholder="date hired", value=user.date_hired)#date_hired
+			.form-group
+				label Pay Rate
+				input.form-control(type="text", name="pay_rate", placeholder="pay rate", value=user.pay_rate)#pay_rate
+			.form-group
+				label Phone
+				input.form-control(type="text", name="phone", placeholder="phone", value=user.phone)#phone
+			.form-group
+				label Address
+				input.form-control(type="text", name="address", placeholder="address", value=user.address)#address
+			.form-group
+				label City
+				input.form-control(type="text", name="city", placeholder="city", value=user.city)#city
+			.form-group
+				label State
+				input.form-control(type="text", name="state", placeholder="state", value=user.state)#state
+			.form-group
+				if user._id
+					input.form-control(type="hidden", value=user._id, name="_id")#id
+				input.btn.btn-default(type="submit")

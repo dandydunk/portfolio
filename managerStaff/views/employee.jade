@@ -1,0 +1,205 @@
+extends ./layout.jade
+
+block content
+	script.
+		function Click_Change_Admin() {
+			var ajax = $.ajax({
+					url:"/employee/update_admin_status/#{user._id}/",
+					accepts:"json",
+				});
+
+			ajax.fail(function(){
+				alert("ajax failed updating the admin status");
+			});
+
+			ajax.done(function(data){
+				if(data.error) {
+					alert("error: "+data.error);
+				}
+
+				else {
+					console.log("updated admin status");
+				}
+			});
+		}
+		$(document).ready(function(){
+			$("#grid_info_changes").jqGrid({
+		        url: "/employee/get_info_changes/#{user._id}",
+		        datatype: "json",
+		        mtype: "GET",
+		        colNames: ["Date", "Changed By", "Change Type", "Old Value"],
+		        colModel: [
+		            { name: "date_changed" },
+		            { name: "changed_by" },
+		            { name: "change_type" },
+		            { name: "old_value" }
+		        ],
+		        pager: "#pager_grid_info_changes",
+		        rowNum: 10,
+		        rowList: [10, 20, 30],
+		        sortable:true,
+		        sortname: "first_name",
+		        sortorder: "desc",
+		        viewrecords: true,
+		        gridview: true,
+		        autoencode: true,
+		        caption: "Info Changes",
+		        autowidth:true
+		    });
+
+		    $("#grid_pay_rates_history").jqGrid({
+		        url: "/employee/get_pay_rates_history/#{user._id}",
+		        datatype: "json",
+		        mtype: "GET",
+		        colNames: ["Date", "Changed By", "Old Value"],
+		        colModel: [
+		            { name: "date_changed" },
+		            { name: "changed_by" },
+		            { name: "old_value" }
+		        ],
+		        pager: "#pager_grid_pay_rates_history",
+		        rowNum: 10,
+		        rowList: [10, 20, 30],
+		        sortable:true,
+		        sortname: "date_changed",
+		        sortorder: "desc",
+		        viewrecords: true,
+		        gridview: true,
+		        autoencode: true,
+		        caption: "Pay Rates History",
+		        autowidth:true
+		    });
+
+		    $("#button_delete").click(function(){
+		    	var _this = $(this);
+				$(_this).attr("disabled", "disabled");
+
+		    	if(!confirm("are you sure you want to delete this employee?")) {
+		    		$(_this).removeAttr("disabled");
+		    		return;
+		    	}
+
+
+				var ajax = $.ajax({
+						url:"/employee/delete/#{user._id}/",
+						accepts:"json",
+					});
+
+				ajax.fail(function(){
+					alert("ajax failed deleting the employee");
+					$(_this).removeAttr("disabled");
+				});
+
+				ajax.done(function(data){
+					if(data.error) {
+						alert("error: "+data.error);
+						$(_this).removeAttr("disabled");
+					}
+
+					else {
+						console.log("deleted employee");
+						location.href = "/staff/";
+					}
+				});
+		    });
+		});
+
+	div
+		input(type="button", value="DELETE")#button_delete
+
+	div
+		h1 #{user.first_name} #{user.last_name}
+		img(src="/uploads/#{user.picture}", width="200px", height="200px")
+
+	div(role='tabpanel')
+		ul.nav.nav-tabs(role='tablist')
+			li.active(role='presentation')
+				a(href='#info', aria-controls='info', role='tab', data-toggle='tab') Info
+
+			li(role='presentation')
+				a(href='#picture', aria-controls='picture', role='tab', data-toggle='tab') Picture
+
+			li(role='presentation')
+				a(href='#info_changes', aria-controls='info changes', role='tab', data-toggle='tab') Info Changes
+
+			li(role='presentation')
+				a(href='#pay_rates_history', aria-controls='pay rate history', role='tab', data-toggle='tab') Pay Rate History
+
+			li(role='presentation')
+				a(href='#access_rights', aria-controls='access rights', role='tab', data-toggle='tab') Access Rights
+
+		.tab-content
+			#info.tab-pane.active(role='tabpanel')
+				div
+					a(href="/employee/save/#{user._id}") Edit Information
+
+				table.table.table-condensed.table-hover
+					tbody
+						tr
+							td
+								p Date Hired
+							td
+								p #{user.date_hired}
+
+						tr
+							td
+								p Pay Rate
+							td
+								p $#{user.pay_rate}
+
+						tr
+							td
+								p Email
+							td
+								p #{user.email}
+
+						tr
+							td
+								p Phone
+							td
+								p #{user.phone}
+
+						tr
+							td
+								p Address
+							td
+								p #{user.address}
+
+						tr
+							td
+								p City
+							td
+								p #{user.city}
+
+						tr
+							td
+								p State
+							td
+								p #{user.state}
+
+			#picture.tab-pane(role='tabpanel')
+				form(enctype="multipart/form-data", method="post", action="/employee/picture")
+					input(type="file", name="picture")
+					input(type="hidden", name="user_id", value = user._id)
+					input(type="submit", value="Upload")
+
+			#info_changes.tab-pane(role='tabpanel')
+				table#grid_info_changes
+					tr
+						td
+				#pager_grid_info_changes
+
+			#pay_rates_history.tab-pane(role='tabpanel')
+				table#grid_pay_rates_history
+					tr
+						td
+				#pager_grid_pay_rates_history
+
+			#access_rights.tab-pane(role='tabpanel')
+				div
+					label Is an admin?
+
+					if "admin" == user.role
+						input(type="checkbox", name="cb_is_admin", checked="checked", onclick="Click_Change_Admin()")#cb_is_admin
+					else
+						input(type="checkbox", name="cb_is_admin", onclick="Click_Change_Admin()")#cb_is_admin

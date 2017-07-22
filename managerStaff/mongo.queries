@@ -1,0 +1,64 @@
+time_cards.aggregate([{
+	$group:{_id:""}
+}])
+
+
+db.clocks.insert({name:"marcus", location:"home", clock_in:4, clock_out:10})
+db.clocks.insert({name:"marcus", location:"home", clock_in:2, clock_out:7})
+db.clocks.insert({name:"cuz", location:"home", clock_in:2, clock_out:9})
+
+db.clocks.insert({name:"marcus", location:"home", clock_in:4, clock_out:10})
+db.clocks.insert({name:"marcus", location:"library", clock_in:2, clock_out:7});
+db.clocks.insert({name:"cuz", location:"home", clock_in:2, clock_out:9});
+db.clocks.insert({name:"marcus", location:"library", clock_in:4, clock_out:10})
+db.clocks.insert({name:"marcus", location:"movie", clock_in:2, clock_out:7});
+db.clocks.insert({name:"cuz", location:"library", clock_in:2, clock_out:9});
+
+db.clocks.aggregate([{
+	$group:{_id:{name:"$name", location:"$location"},
+			count_clock_in:{
+				$sum:{
+					$subtract:["$clock_out", "$clock_in"]
+				}
+			}
+		}
+}]);
+
+db.users.insert({first_name:"jack", last_name:"dan", email:"jack@gmail.com", pass:"pass"})
+db.users.insert({first_name:"chris", last_name:"charles", email:"chris@gmail.com", pass:"pass"})
+db.users.insert({first_name:"john", last_name:"david", email:"john@gmail.com", pass:"pass"})
+db.users.insert({first_name:"sally", last_name:"jon", email:"sally@gmail.com", pass:"pass"})
+
+{ "_id" : ObjectId("55875b98c764b0342e386954"), "first_name" : "jack", "last_name" : "dan", "email" : "jack@gmail.com", "pass" : "pass" }
+{ "_id" : ObjectId("55875b98c764b0342e386955"), "first_name" : "chris", "last_name" : "charles", "email" : "chris@gmail.com", "pass" : "pass" }
+{ "_id" : ObjectId("55875b98c764b0342e386956"), "first_name" : "john", "last_name" : "david", "email" : "john@gmail.com", "pass" : "pass" }
+{ "_id" : ObjectId("55875b9ac764b0342e386957"), "first_name" : "sally", "last_name" : "jon", "email" : "sally@gmail.com", "pass" : "pass" }
+
+db.time_cards.insert({clock_in_time_date:Date("6/6/2015 2:00")});
+
+1997-07-16T19:20+01:00
+db.time_cards.insert({user:ObjectId("55875b98c764b0342e386954"),
+					location:"library",
+					clock_in_time_date:ISODate("2015-06-09T01:00+01:00"),
+					clock_out_time_date:ISODate("2015-06-09T08:00+01:00")});
+
+db.time_cards.insert({user:ObjectId("55875b98c764b0342e386955"),
+					location:"library",
+					clock_in_time_date:ISODate("2015-06-09T02:00+01:00"),
+					clock_out_time_date:ISODate("2015-06-09T010:00+01:00")});
+
+db.time_cards.insert({user:ObjectId("55875b98c764b0342e386956"),
+					location:"mall",
+					clock_in_time_date:ISODate("2015-06-09T03:00+01:00"),
+					clock_out_time_date:ISODate("2015-06-09T08:00+01:00")});
+
+db.time_cards.insert({user:ObjectId("55875b98c764b0342e386957"),
+					location:"mall",
+					clock_in_time_date:ISODate("2015-06-09T05:00+01:00"),
+					clock_out_time_date:ISODate("2015-06-09T08:00+01:00")});
+
+need to get TOTAL HOURS by LOCATION for users
+
+select sub(clock_2, clock_1)
+from time_cards
+group by location

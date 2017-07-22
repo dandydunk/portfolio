@@ -1,0 +1,25 @@
+extends ./layout.jade
+
+block content
+	div
+		a(href="/employee/save") Save Employee
+
+	.row
+		-for(var i = 0; i < list_staff.length; i++)
+			-var e = list_staff[i];
+			-var picture = e['picture'];
+			-var first_name = e['first_name'];
+			-var last_name = e['last_name'];
+			if !first_name || !last_name
+				continue
+			-var email = e['email'];
+			-var phone = e['phone'];
+			-var id = e['_id'];
+
+			div(style="margin:10px;").pull-left
+				a(href="/employee/#{id}/")
+					.panel.panel-default
+						.panel-heading
+							h3.panel-title #{first_name} #{last_name}
+						.panel-body
+							img(src="/uploads/#{picture}", alt="#{first_name} #{last_name}", width="200px", height="200px", padding="10px")

@@ -1,0 +1,81 @@
+* {
+	margin:0;
+	padding:0;
+	color:white;
+	font-size:1em;
+}
+
+.hide {
+	display:none;
+}
+
+body {
+	background-color:#333333;
+}
+
+h1 {
+	text-align:center;
+	font-size:2em;
+	color:#d0d7e1;
+}
+
+#access_notifier_containier {
+	margin:0 auto;
+	font-size:1.5em;
+	font-weight: bold;
+	margin-top:25px;
+	margin-bottom:25px;
+	letter-spacing: 30px;
+
+}
+
+#access_notifier_containier span{
+	color:#d0d7e1;
+}
+
+#access_notifier_containier  {
+	text-align:center;
+}
+
+
+#login_containier {
+	width:40%;
+	height:50%;
+	padding-top:55px;
+	margin:0 auto;
+}
+
+#login_inner_containier {
+	width:90%;
+	margin:0 auto;
+}
+
+#dial_buttons {
+	text-align:center;
+}
+
+#dial_buttons input {
+	width:30%;
+	height:80px;
+	background-color:#333333;
+	color:#ecedf1;
+	border:solid;
+	border-radius: 5em/5em;
+}
+
+#containier_clock {
+	position:relative;
+	top:-50px;
+	left:0px;
+}
+
+#button_clock_action{
+	background-color:#3e3c30;
+	color:#ecedf1;
+}
+
+#code{
+	display: block;
+	height: 50px;
+	text-align:center;
+}

@@ -1,0 +1,50 @@
+doctype html
+html
+	head
+		title Domo Taco Food Truck - #{page.title}
+
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		script(src="/libs/jquery-1.11.3.min.js")
+		script(src="/libs/jquery-ui/jquery-ui.min.js")
+		script(src="/libs/bootstrap/js/bootstrap.min.js")
+		script(src="/libs/jqgrid/js/i18n/grid.locale-en.js")
+		script(src="/libs/jqgrid/js/jquery.jqGrid.min.js")
+		link(rel="stylesheet", type="text/css", href="/libs/bootstrap/css/bootstrap.min.css")
+		link(rel="stylesheet", type="text/css", href="/libs/jquery-ui/jquery-ui.min.css")
+		link(rel="stylesheet", type="text/css", href="/libs/jqgrid/css/ui.jqgrid.css")
+		link(rel="stylesheet", type="text/css", href="/css/main.css")
+
+		block scripts
+	body
+		section.container#main_container
+			header
+				nav.navbar.navbar-default
+					div.container-fluid
+						div.navbar-header
+							span.navbar-brand Domo Taco
+							ul.nav.navbar-nav
+								li
+									a(href ='/') Dashboard
+									if "admin" == request.session.user.role
+								li
+									a(href='/staff') Staff
+
+								li
+									a(href='/staff/reports') Reports
+								li
+									a(href='/account/logout') Logout
+
+				#bread_crumbs.row
+					-var count_crumbs = list_bread_crumbs.length
+					-for(var i = (count_crumbs- 1); i >= 0; i--)
+						-var bread_crumb = list_bread_crumbs[i]
+						a(href="#{bread_crumb.url}") #{bread_crumb.name}
+						-if(i-1 >= 0)
+							span &gt;
+
+			section#body
+				section.row
+					block view_nav
+
+				section.row
+					block content

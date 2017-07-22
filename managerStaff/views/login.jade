@@ -1,0 +1,128 @@
+doctype html
+html
+	head
+		title Domo Taco Food Truck - Login
+
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		script(src="/libs/jquery-1.11.3.min.js")
+
+		script(src="/libs/bootstrap/js/bootstrap.min.js")
+		link(rel="stylesheet", type="text/css", href="/libs/bootstrap/css/bootstrap.min.css")
+		link(rel="stylesheet", type="text/css", href="/css/login.css")
+
+		script.
+			var Pass_Code = "";
+
+			$(document).ready(function(){
+				
+				//$("#loading_clock_action").hide();
+				$(".dailer_button").click(function(){
+					var val = $(this).val();
+
+					console.log("clicked", $(this).val());
+					if(val == "") return;
+					else if(val == "Clear") {
+						if(Pass_Code.length) {
+							Pass_Code = "";
+							$("#code").empty();
+						}
+					}
+					else {
+						Pass_Code += $(this).val();
+						$("#access_notifier_containier span").fadeOut(100).fadeIn(100);
+						$("#code").append("*");
+					}
+				});
+
+				$("#button_clock_action").click(function(){
+					$(this).attr("disabled", "disabled");
+					$("#loading_clock_action").show();
+					var _this = $(this);
+
+					var pass_code = Pass_Code;
+					Pass_Code = "";
+					if (navigator.geolocation) {
+				        navigator.geolocation.getCurrentPosition(function(pos){
+				        	var data = "clock_time="+escape(new Date())+
+				        				"&pass_code="+escape(pass_code) +
+				        				"&latitude="+escape(pos.coords.latitude)+
+				        				"&longitude="+escape(pos.coords.longitude);
+
+							console.log("sending", data);
+							var ajax = $.ajax({
+								url:"/account/login",
+								accepts:"json",
+								method:"post",
+								data:data
+							});
+
+							ajax.fail(function(){
+								alert("ajax failed trying to login");
+								$("#loading_clock_action").hide();
+								$(_this).removeAttr("disabled");
+								$("#loading_clock_action").hide();
+								$("#code").empty();
+							});
+
+
+							ajax.done(function(data){
+								console.log("data", data);
+								if(data.error) {
+									alert("error: "+data.error);
+									$("#loading_clock_action").hide();
+									$(_this).removeAttr("disabled");
+									$("#loading_clock_action").hide();
+									$("#code").empty();
+								}
+
+								else if(data.redirect) {
+									location.href = data.redirect;
+								}
+
+								else if(data.clocked_in) {
+									alert("Hi, "+data.name+", you have been clocked in!");
+									location.href = location.href;
+								}
+
+								else if(data.clocked_out) {
+									alert("Hi, "+data.name+", you have been clocked out!")
+									location.href = location.href;
+								}
+							});
+			        	});
+			        }
+
+			        else {
+			        	alert("unable to get your GPS");
+			        	$(_this).removeAttr("disabled");
+			        }
+				});
+			});
+	body
+		div#login_containier
+			div#containier_clock
+				span(style="display:none;")#loading_clock_action loading...
+
+			div#login_inner_containier
+				h1 Domo Taco Food Truck
+
+				div#access_notifier_containier
+					span#code
+
+				div#dial_buttons
+					div
+						input(type="button", class="btn", value=1).dailer_button
+						input(type="button", value=2).dailer_button
+						input(type="button", value=3).dailer_button
+					div
+						input(type="button", value=4).dailer_button
+						input(type="button", value=5).dailer_button
+						input(type="button", value=6).dailer_button
+					div
+						input(type="button", value=7).dailer_button
+						input(type="button", value=8).dailer_button
+						input(type="button", value=9).dailer_button
+					div
+						input(type="button", value="Clear").dailer_button
+						input(type="button", value=0).dailer_button
+						input(type="button", value="CLOCK IN / OUT")#button_clock_action

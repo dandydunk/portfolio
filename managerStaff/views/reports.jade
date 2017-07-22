@@ -1,0 +1,91 @@
+extends ./layout.jade
+
+block content
+	script(src="/libs/jquery.printElement.min.js")
+	
+	script.
+		var Grid_Loaded = false;
+		function LoadGridStats(col_names, col_model, data) {
+			if(Grid_Loaded) {
+				$.jgrid.gridUnload("#grid_stats");
+			}
+
+			$("#grid_stats").jqGrid({
+				data:data,
+		        datatype: "local",
+		        colNames: col_names,
+		        colModel: col_model,
+		        pager: "#pager_grid_stats",
+		        rowNum: 10,
+		        rowList: [10, 20, 30],
+		        sortable:true,
+		        viewrecords: true,
+		        gridview: true,
+		        autoencode: true,
+		        caption: "Employee Stats",
+		        autowidth:true
+		    });
+		    Grid_Loaded = true;
+		}
+
+		function GetStats() {
+			$("#button_show_stats").attr("disabled", "disabled");
+
+			var ajax = $.ajax({
+				url:"/staff/reports_single?start_date="+
+					escape($("#input_start_date").val())+
+					"&end_date="+escape($("#input_end_date").val())+
+					"&find_user="+escape($("#sb_employees").val()),
+				accepts:"json"
+			});
+
+			ajax.fail(function(){
+				alert("ajax failed getting stats");
+				$("#button_show_stats").removeAttr("disabled");
+			});
+
+			ajax.done(function(data){
+				if(data.error) {
+					alert("error: "+data.error);
+				}
+
+				else {
+					LoadGridStats(data.model_names, data.model, data.data);
+				}
+
+				$("#button_show_stats").removeAttr("disabled");
+			});
+		}
+		$(document).ready(function(){
+			$("#input_start_date").datepicker();
+			$("#input_end_date").datepicker();
+			$("#button_show_stats").click(function(){
+				GetStats();
+			});
+			
+		});
+
+	h1 Reports
+
+	div
+		select#sb_employees(class="form-control", style="width:200px")
+			option(value="") Filter by User
+			-for(var i = 0; i < list_staff.length; i++)
+				-var user = list_staff[i];
+				option(value=user._id) #{user.first_name} #{user.last_name}
+		div
+			label Start Date
+			input(type="text", class="form-control", style="width:200px")#input_start_date
+
+		div
+			label End Date
+			input(type="text", class="form-control", style="width:200px")#input_end_date
+		
+		div
+			button#button_show_stats(class="btn btn-default") Show Stats
+
+	table#grid_stats
+	tr
+		td
+
+	#pager_grid_stats
