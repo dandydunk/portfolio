@@ -1,2 +1,48 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+.panelIdentityHeightRoot {
+	height:auto;
+	margin-bottom:20px;
+	margin-top:20px;
+}
+
+.panelIdentityHeightChild {
+	height:auto;
+	margin-right:auto;
+}
+
+
+@media (min-width: 576px) {
+	
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+	
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+	.panelIdentityHeightRoot {
+		height:300px;
+	}
+	
+	.panelIdentityHeightChild {
+		height:100%;
+		margin-right:20px;
+	}
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+	.panelIdentityHeightRoot {
+		height:300px;
+	}
+	
+	.panelIdentityHeightChild {
+		height:100%;
+		margin-right:20px;
+	}
+}

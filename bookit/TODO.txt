@@ -1,0 +1,8 @@
+login form
+register form
+make admin area
+inventory
+*add category
+home page
+*remove login box when logged in
+*remove register box when logged in 

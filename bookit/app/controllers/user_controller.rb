@@ -5,13 +5,7 @@ class UserController < ApplicationController
     render
   end
 
-
-
   def register
-
-  end
-
-  def registerPost
     if params.has_key?("email") != true
       render json: {"error" => "the email is missing"}
       return
@@ -57,6 +51,10 @@ class UserController < ApplicationController
     user.password = params[:password]
     user.save()
     render json: {"success" => true}
+  end
+
+  def login
+    
   end
 
   def test

@@ -1,0 +1,327 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/views/general/index.html.erb",
+			"settings":
+			{
+				"buffer_size": 3228,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/controllers/general_controller.rb",
+			"settings":
+			{
+				"buffer_size": 337,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/application_controller.rb",
+			"settings":
+			{
+				"buffer_size": 171,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "class UserController < ApplicationController\n  def index\n    @user = User.find(params[:id])\n    @rentals = Rental.joins(:inventories).all.select(\"inventories.title\")\n    render\n  end\n\n  def login\n    if params.has_key?(\"email\") != true\n      render json: {\"error\" => \"the email is missing\"}\n      return\n    end\n\n    if params.has_key?(\"password\") != true\n      render json: {\"error\" => \"the password is missing\"}\n      return\n    end\n  end\n\n  def register\n    if params.has_key?(\"email\") != true\n      render json: {\"error\" => \"the email is missing\"}\n      return\n    end\n\n    if params.has_key?(\"password\") != true\n      render json: {\"error\" => \"the password is missing\"}\n      return\n    end\n\n    if params.has_key?(\"passwordConfirm\") != true\n      render json: {\"error\" => \"the password confirm is missing\"}\n      return\n    end\n\n    password = params[:password].strip\n    email = params[:email].strip\n    passwordConfirm = params[:passwordConfirm].strip\n\n    if password.length == 0\n      render json: {\"error\" => \"the password is missing\"}\n      return\n    end\n\n    if passwordConfirm.length == 0\n      render json: {\"error\" => \"the password confirm is missing\"}\n      return\n    end\n\n    if password != passwordConfirm\n      render json: {\"error\" => \"the passwords don't match\"}\n      return\n    end\n\n    user = User.find_by_email(email)\n    if user != nil\n      render json: {\"error\" => \"that email already exists.\"}\n      return\n    end\n\n    user = User.new()\n    user.email = params[:email]\n    user.password = params[:password]\n    user.save()\n    render json: {\"success\" => true}\n  end\n\n  def login\n\n  end\n\n  def test\n    email = params[:email]\n    email = email.strip\n    render plain: email\n  end\nend\n",
+			"file": "app/controllers/user_controller.rb",
+			"file_size": 1462,
+			"file_write_time": 131470551899995309,
+			"settings":
+			{
+				"buffer_size": 1716,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/macportfolio/bookit",
+		"/D/macportfolio/bookit/app",
+		"/D/macportfolio/bookit/app/controllers",
+		"/D/macportfolio/bookit/app/views",
+		"/D/macportfolio/bookit/app/views/general"
+	],
+	"file_history":
+	[
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/D/macportfolio/bookit/app/controllers/base_controller.rb"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/views/general/index.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3228,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								21,
+								21
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/controllers/general_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 337,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/controllers/application_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 171,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								159,
+								159
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/controllers/user_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1716,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								434,
+								434
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "sublime.sublime-project",
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 233.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

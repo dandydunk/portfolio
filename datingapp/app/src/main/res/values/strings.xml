@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">WingMan</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="newAccountActivityTitle">NEW ACCOUNT</string>
+    <string name="newAccountSuccess">You have successfully created a new account.</string>
+    <string name="login">LOGIN</string>
+    <string name="register">REGISTER</string>
+    <string name="logout">LOGOUT</string>
+    <string name="textViewLogoutActivity">Logging you out...</string>
+    <string name="inboxActivityTitle">INBOX</string>
+    <string name="title_activity_update_password">UpdatePasswordActivity</string>
+    <string name="updatePasswordActivityTitle">UPDATE PASSWORD</string>
+    <string name="loginActivityTitle">LOGIN</string>
+    <string name="loginSuccess">You have successfully logged in</string>
+    <string name="updateProfileActivityTitle">UPDATE PROFILE</string>
+    <string name="viewUserProfileActivityTitle"></string>
+    <string name="gpsActivityTitle">GPS Finder</string>
+    <string name="managePhotosActivityTitle">MANAGE PHOTOS</string>
+    <string name="googleMapsKey">AIzaSyDAWPwkjJidk_F2XtW5Q0JhOcb3Tn-ho_w</string>
+    <string name="title_activity_chat">ChatActivity</string>
+    <string name="facebook_app_id">1786091621707514</string>
+</resources>

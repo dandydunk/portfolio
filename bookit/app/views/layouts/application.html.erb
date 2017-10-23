@@ -3,16 +3,35 @@
   <head>
     <title>Bookit</title>
     <%= csrf_meta_tags %>
-
+	<meta name="viewport" content="width=device-width" />
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-2">
-          <h1><a href="/">BookIt</a></h1>
+    <div class="container-fluid">
+      <div class="row boxBackThree">
+        <div class="col-lg-1">
+          <h1 class="logo"><a href="/">BookIt</a></h1>
+        </div>
+		
+		<div class="col-lg-11">
+			<nav id="mainNav">
+				<ul>
+					<li><a href="javascript:void(0)">Movie Categories</a>
+						<ul class="childMenu" style="background-color:black;">
+							<li><a href="javascript:void(0)">Horror</a></li>
+							<li><a href="javascript:void(0)">Sci-Fi</a></li>
+							<li><a href="javascript:void(0)">Romance1111111111111111111111111111111</a></li>
+							<li><a href="javascript:void(0)">Thriller</a></li>
+						</ul>
+					</li>
+					<li><a href="javascript:void(0)">Manage Account</a></li>
+					<li><a href="javascript:void(0)">Manage Movie Rentals</a></li>
+					<li><a href="javascript:void(0)">Wish List</a></li>
+					<li><a href="javascript:void(0)">Logout</a></li>
+				</ul>
+			</nav>
         </div>
       </div>
 

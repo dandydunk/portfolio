@@ -9,8 +9,57 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *
  *= require_tree .
  *= require_self
  *= require jquery-ui
  */
+
+body {
+	background-color:#8A772F;
+}
+
+h2 {
+	color:white;
+}
+
+li {
+	list-style-type:none;
+}
+
+#mainNav > ul > li {
+	float:left;
+	margin-right:20px;
+}
+
+#mainNav > ul {
+	overflow:none;
+}
+
+.childMenu {
+	position:absolute;
+	z-index:99999;
+}
+
+.movieCover {
+	border:thin solid black;
+}
+
+.logo a {
+	color:#3D340F;
+}
+
+.boxBack {
+	background-color:#97962C;
+	background: linear-gradient(0deg, #97962C, #575719);
+	border-radius:5px;
+}
+
+.boxBackComplement {
+	background-color:#2F358A;
+	background: linear-gradient(90deg, black, #2F358A, black);
+}
+
+.boxBackThree {
+	background-color:#706126;
+	background: linear-gradient(90deg, black, #706126, black);
+}

@@ -1,0 +1,17 @@
+*home
+**list books
+*login form
+*register form
+*logout
+*forgot password form
+*manage books
+**add book form
+**data grid listing books
+*show book page
+**book title
+**picture
+**description
+**new review form
+
+
+https://developers.google.com/books/docs/v1/getting_started

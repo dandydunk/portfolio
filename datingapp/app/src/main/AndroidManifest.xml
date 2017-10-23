@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wingmand">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- <uses-feature android:name="android.hardware.location.network" /> -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".NewAccountActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".LogoutActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".InboxActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".UpdatePasswordActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".UpdateProfileActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ViewUserProfileActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".GPSActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".UploadPhotosActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ManagePhotosActivity"
+            android:parentActivityName=".UploadPhotosActivity" />
+
+        <activity android:name=".CheckInActivity" android:parentActivityName=".MainActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/googleMapsKey" />
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <activity
+            android:name=".ChatActivity"
+            android:label="@string/title_activity_chat"
+            android:parentActivityName=".InboxActivity" />
+
+        <service
+            android:name=".WingManService"
+            android:enabled="true"
+            android:exported="true"></service>
+    </application>
+
+</manifest>

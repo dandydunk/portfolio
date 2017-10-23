@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_view_user_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#000"
+
+    tools:context="com.wingmand.ViewUserProfileActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/toolbarbackground"
+        android:elevation="4dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="@string/app_name"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <ImageView
+        android:id="@+id/profilePic"
+        android:layout_below="@id/my_toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_width="168dp"
+        android:layout_height="168dp"
+        android:padding="5dp" />
+    <Button android:id="@+id/buttonNewInbox" android:text="NEW INBOX" android:onClick="buttonNewInboxClick"
+        android:layout_width="wrap_content" android:layout_height="wrap_content" android:visibility="gone"
+        android:layout_below="@id/profilePic"/>
+
+    <Button android:id="@+id/buttonCancelInbox" android:text="CANCEL INBOX" android:onClick="buttonCancelInboxClick"
+        android:layout_width="wrap_content" android:layout_height="wrap_content" android:visibility="gone"
+        android:layout_toRightOf="@+id/buttonNewInbox" android:layout_below="@id/profilePic"/>
+
+
+    <Button android:id="@+id/buttonApproveInbox" android:text="APPROVE INBOX" android:onClick="buttonApproveInboxClick"
+        android:layout_width="wrap_content" android:layout_height="wrap_content" android:visibility="gone"
+        android:layout_below="@id/profilePic"/>
+
+    <Button android:id="@+id/buttonRejectInbox" android:text="REJECT INBOX" android:onClick="buttonRejectInboxClick"
+        android:layout_width="wrap_content" android:layout_height="wrap_content" android:visibility="gone"
+        android:layout_toRightOf="@+id/buttonApproveInbox" android:layout_below="@id/profilePic" />
+
+    <Button android:id="@+id/buttonSendInboxMessage" android:text="SEND A MESSAGE" android:onClick="buttonSendInboxMessageClick"
+        android:layout_width="wrap_content" android:layout_height="wrap_content" android:visibility="gone"
+        android:layout_below="@id/profilePic"/>
+
+
+
+
+</RelativeLayout>

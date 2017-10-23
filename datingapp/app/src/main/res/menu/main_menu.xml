@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@+id/groupMainMenuIsLoggedIn">
+        <item android:id="@+id/inboxMenuItem"
+            android:title="INBOX"
+            app:showAsAction="ifRoom"/>
+        <item android:id="@+id/checkInMenuItem"
+            android:title="CHECK IN"
+            app:showAsAction="ifRoom"/>
+        <item android:id="@+id/updateProfileMenuItem"
+            android:title="UPDATE PROFILE"/>
+        <item android:id="@+id/managePhotosMenuItem"
+            android:title="MANAGE PHOTOS"/>
+        <item android:id="@+id/updatePasswordMenuItem"
+            android:title="UPDATE PASSWORD"/>
+        <item android:id="@+id/logoutMenuItem"
+            android:title="LOGOUT"/>
+    </group>
+
+    <group android:id="@+id/groupMainMenuIsLoggedOut">
+        <item android:id="@+id/loginMenuItem"
+            android:title="LOGIN"/>
+        <item android:id="@+id/registerMenuItem"
+            android:title="REGISTER"/>
+    </group>
+</menu>

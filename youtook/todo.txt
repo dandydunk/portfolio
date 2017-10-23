@@ -1,0 +1,22 @@
+pages
+*login page
+*register page
+*home page
+**list latest photos
+*submit photo page
+*show users photos page
+
+
+models
+*users
+*photos
+**id
+**userId
+**path
+**uploadDateTime
+*photoComments
+**id
+**photoId
+**comment
+**userId
+

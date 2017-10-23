@@ -1,0 +1,16 @@
+.book {
+	list-style-type:none;
+	.cover {
+		width:auto;
+		height:200px;
+	}
+}
+
+.mainNav {
+	overflow:hidden;
+	list-style-type:none;
+	li {
+		float:left;
+		margin-right:10px;
+	}
+}

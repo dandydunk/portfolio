@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   get 'user/index/:id', to: 'user#index'
-  get 'user/register'
   get 'user/test'
-  post 'user/registerPost', to: 'user#registerPost'
+  post 'user/register', to: 'user#register'
   get 'general/index'
   get 'inventory/new'
   get 'inventory/show/:id', to: 'inventory#show'
