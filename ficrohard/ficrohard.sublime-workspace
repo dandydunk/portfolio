@@ -1,0 +1,719 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"log",
+				"logFilePath"
+			],
+			[
+				"Is",
+				"IsInInlineIgnoreList"
+			],
+			[
+				"in",
+				"inlineIgnoreList"
+			],
+			[
+				"sysCall",
+				"sysCallIgnoreList"
+			],
+			[
+				"ppLoad",
+				"ppLoadIndex"
+			],
+			[
+				"pack",
+				"packetType"
+			],
+			[
+				"diec",
+				"directorHexIP"
+			],
+			[
+				"direcr",
+				"directorHexIP"
+			],
+			[
+				"messageId",
+				"messageId2"
+			],
+			[
+				"list",
+				"listBytes"
+			],
+			[
+				"dire",
+				"directorHexIP"
+			],
+			[
+				"dir",
+				"directorHexIP"
+			],
+			[
+				"packet",
+				"packetSteps"
+			],
+			[
+				"sys",
+				"sysCallDesc"
+			],
+			[
+				"packe",
+				"packets"
+			],
+			[
+				"be",
+				"begin_extract"
+			],
+			[
+				"ass",
+				"assemblyType"
+			],
+			[
+				"famil",
+				"familyId"
+			],
+			[
+				"seria",
+				"serialNumber"
+			],
+			[
+				"system",
+				"systemPartNumber"
+			],
+			[
+				"vpd",
+				"vpdData"
+			],
+			[
+				"module",
+				"moduleId"
+			],
+			[
+				"Result",
+				"Result_920E_0E_01"
+			],
+			[
+				"seq",
+				"seqNum"
+			],
+			[
+				"zone",
+				"zoneAAcFailure"
+			],
+			[
+				"read",
+				"readError"
+			],
+			[
+				"sens",
+				"sensorsStatus"
+			],
+			[
+				"SysCall920D",
+				"sysCall920D_17_00"
+			],
+			[
+				"er",
+				"readErrorBytesPacket"
+			],
+			[
+				"rela",
+				"relevantBytesPacket"
+			],
+			[
+				"sysC",
+				"sysCallFinished"
+			],
+			[
+				"mutex",
+				"mutexDirectorsMap"
+			],
+			[
+				"lo",
+				"locationIdBytes"
+			],
+			[
+				"bay",
+				"baySide"
+			],
+			[
+				"se",
+				"secondBytes"
+			],
+			[
+				"genSt",
+				"genStatusPacket"
+			],
+			[
+				"SysCall",
+				"sysCallOutPrefixHeader"
+			],
+			[
+				"sender",
+				"senderIdNum"
+			],
+			[
+				"timeOf",
+				"timeOfDateMicro"
+			],
+			[
+				"GetHea",
+				"GetHeaderPacketFmt"
+			],
+			[
+				"GetHe",
+				"GetHeaderPacketFmt"
+			],
+			[
+				"sysOut",
+				"sysOutHeaderPrefix"
+			],
+			[
+				"rec",
+				"rec_size"
+			],
+			[
+				"Sys",
+				"SysOutHeaderPrefix"
+			],
+			[
+				"Bui",
+				"BuildSysCallPackets"
+			],
+			[
+				"Sock",
+				"SocketRecv"
+			],
+			[
+				"0x00",
+				"0x00000000"
+			],
+			[
+				"re",
+				"reserved"
+			],
+			[
+				"timeOd",
+				"timeOfDateMicro"
+			],
+			[
+				"Dir",
+				"dirState"
+			],
+			[
+				"senderI",
+				"senderIdType"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/Users/marcus/Documents/todo.txt",
+			"settings":
+			{
+				"buffer_size": 425,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/marcus/Documents/macollins/portfolio/ficrohard"
+	],
+	"file_history":
+	[
+		"/C/Users/marcus/Documents/clients/chris/netapps/asups/alphnfv07-alphnfv08/alphnfv07/SYSCONFIG-A.TXT",
+		"/C/Users/marcus/Documents/a.html",
+		"/C/Users/marcus/Documents/clients/chris/netapps/asups/bangnf03-bangnf04/bangnf03/SYSCONFIG-A.TXT",
+		"/C/Users/marcus/Documents/clients/chris/netapps/asups/campnf01-campnf02/campnf01/SYSCONFIG-A.TXT",
+		"/C/Users/marcus/Documents/clients/chris/code/titan/WebApplication1/App_Data/log.txt",
+		"/C/Users/marcus/Documents/clients/chris/netapps/asups/bangnf03-bangnf04/bangnf04/SYSCONFIG-A.TXT",
+		"/C/Users/marcus/Documents/clients/chris/netapps/asups/campnf01-campnf02/HA Group Notification from campnf01 (USER_TRIGGERED (COMPLETEQ2_Health)) INFO.msg",
+		"/C/Users/marcus/NetApp/ConfigAdvisor/Config/CONFIG",
+		"/C/Users/marcus/Documents/clients/chris/netapps/QR-20190401-incomplete/arkcnf01-02/arkcnf01/STORAGE-SHELF.txt",
+		"/C/Users/marcus/Documents/clients/chris/netapps/QR-20190401-incomplete/naplnf01-02/naplnf01/SYSCONFIG-A.txt",
+		"/C/Users/marcus/Documents/todo.txt",
+		"/C/Program Files/NetApp/ConfigAdvisor/ConfigAdvisor-nginx.bat",
+		"/C/Program Files/NetApp/ConfigAdvisor/nginx/conf/nginx.conf",
+		"/C/Program Files/NetApp/ConfigAdvisor/nginx/conf/fastcgi.conf",
+		"/C/Program Files/NetApp/ConfigAdvisor/ca_view/static/caindex.html",
+		"/C/Program Files/NetApp/ConfigAdvisor/ca_view/static/runtime.ad307c4802aaebf911be.js",
+		"/C/Users/marcus/Documents/clients/chris/netapps/QR-20190401-incomplete/arkcnf01-02/arkcnf01/SYSCONFIG-A.txt",
+		"/C/Users/marcus/Documents/clients/chris/netapps/QR-20190401-incomplete/cnbeifs21-22/cnbeifs21/DF.txt",
+		"/C/Users/marcus/Documents/clients/chris/netapps/QR-20190401-incomplete/cnbeifs21-22/cnbeifs21/CM-STATS",
+		"/C/Users/marcus/Documents/clients/chris/netapps/QR-20190401-incomplete/belfnfv09-10/belfnfv09/CM-STATS",
+		"/C/Users/marcus/Documents/clients/chris/netapps/QR-20190701/7mode/alphnf21-alphnf22/alphnf21/CM-STATS/CM-STATS.xml",
+		"/C/Users/marcus/Documents/clients/chris/netapps/QR-20190401-incomplete/alphnf01-02/alphnf01/DF-A.txt",
+		"/C/Users/marcus/Documents/clients/chris/netapps/QR-20190401-incomplete/alphnf01-02/alphnf01/DF-S.txt",
+		"/C/Users/marcus/Documents/clients/chris/netapps/QR-20190401-incomplete/alphnf01-02/alphnf01/SYSCONFIG-A.txt",
+		"/C/Users/marcus/Documents/clients/chris/netapps/QR-20190401-incomplete/alphnf01-02/alphnf01/DF.txt",
+		"/C/Users/marcus/Documents/clients/chris/netapps/QR-20190401-incomplete/alphnf01-02/alphnf01/STORAGE-SHELF.txt",
+		"/C/Users/marcus/Documents/clients/chris/netapps/QR-20190401-incomplete/cnbeifs21-22/cnbeifs21/CM-STATS/CM-STATS.xml",
+		"/C/Users/marcus/Documents/clients/chris/netapps/QR-20190401-incomplete/cighnf07-08/cighnf07/SYSCONFIG-A.txt",
+		"/C/Users/marcus/Documents/clients/chris/netapps/QR-20190401-incomplete/cighnf07-08/cighnf08/STORAGE-SHELF.txt",
+		"/C/Users/marcus/Documents/clients/chris/netapps/QR-20190401-incomplete/cighnf07-08/cighnf07/STORAGE-SHELF.txt",
+		"/C/Users/marcus/Documents/clients/chris/netapps/QR-20190401-incomplete/cighnf07-08/cighnf07/STORAGE-DISK.txt",
+		"/C/Users/marcus/Documents/clients/chris/netapps/svg_test/svg_test.html",
+		"/C/Users/marcus/Documents/clients/chris/netapps/QR-20190401-incomplete/inblrgrcfs21-22/inblrgrcfs21/STORAGE-SHELF.txt",
+		"/C/Users/marcus/Documents/clients/chris/netapps/QR-20190401-incomplete/lovpnf03-04/lovpnf03/STORAGE-SHELF.txt",
+		"/C/Users/marcus/Documents/clients/chris/netapps/QR-20190401-incomplete/inblrgrcfs21-22/inblrgrcfs22/STORAGE-SHELF.txt",
+		"/C/Users/marcus/Documents/clients/chris/netapps/QR-20190401-incomplete/inblrgrcfs21-22/inblrgrcfs22/STORAGE-DISK.txt",
+		"/C/Users/marcus/Documents/clients/chris/netapps/svg_test/hwvis.css",
+		"/C/Users/marcus/Documents/clients/chris/netapps/QR-20190401-incomplete/clwrnf01-02/clwrnf01/SYSCONFIG-A.txt",
+		"/C/Users/marcus/Documents/clients/chris/netapps/QR-20190401-incomplete/netappgpcld01a-b/netappgpcld01a/DF.txt",
+		"/C/Users/marcus/Documents/clients/chris/netapps/QR-20190401-incomplete/netappgpcld01a-b/netappgpcld01a/DF-A.txt",
+		"/C/Users/marcus/Documents/clients/chris/netapps/QR-20190401-incomplete/newcnf01-02/newcnf01/STORAGE-SHELF.txt",
+		"/C/Users/marcus/Documents/clients/chris/netapps/QR-20190401-incomplete/pragnf01-02/pragnf01/STORAGE-SHELF.txt",
+		"/C/Users/marcus/Documents/clients/chris/netapps/QR-20190401-incomplete/moscnf03-04/moscnf03/STORAGE-SHELF.txt",
+		"/C/Users/marcus/Documents/macollins/game1/index.html",
+		"/C/Users/marcus/Documents/clients/chris/netapps/QR-20190401_complete/arkcnf01-02/arkcnf01/STORAGE-SHELF.txt",
+		"/C/Users/marcus/Documents/my addressses.txt",
+		"/C/Users/marcus/Documents/clients/chris/netapps/QR-20190401-incomplete/ilhainap21-22/ilhainap21/STORAGE-SHELF.txt",
+		"/C/Users/marcus/Documents/clients/chris/code/xml/test.ahk",
+		"/C/Users/marcus/Documents/clients/chris/netapps/parse-storage-disk-clipboard.ahk",
+		"/C/Users/marcus/Documents/clients/chris/netapps/fihelfscl-01-02/fihelfscl-01/STORAGE-SHELF.TXT",
+		"/C/Users/marcus/Documents/clients/chris/code/xml/output.txt",
+		"/C/Users/marcus/Documents/clients/chris/code/xml/xmldata.xml",
+		"/C/Users/marcus/Documents/clients/chris/code/xml/xmlclass.ahk",
+		"/C/Users/marcus/Documents/clients/chris/cm_hourly_stats.xml",
+		"/C/Users/marcus/Documents/macollins/portfolio/donton/index.html",
+		"/C/Users/marcus/Documents/macollins/portfolio/donton/css/styles.css",
+		"/C/Users/marcus/Documents/clients/chris/ffdec_11.2.0/ex/scripts/sw.as",
+		"/C/Users/marcus/Documents/clients/chris/ffdec_11.2.0/ex/scripts/swWizard/swWizardStep.as",
+		"/C/Users/marcus/Documents/clients/chris/ffdec_11.2.0/ex/scripts/proxyserver_ejb/swSystemManagementBeanModel.as",
+		"/C/Users/marcus/Documents/clients/chris/ffdec_11.2.0/ex/scripts/com/emc/ecuit/flex/events/AppNavAreaEvent.as",
+		"/C/Users/marcus/Documents/clients/chris/ffdec_11.2.0/ex/scripts/com/emc/ecuit/flex/events/AppNavAreaPopupEvent.as",
+		"/C/Users/marcus/Documents/clients/chris/ffdec_11.2.0/ex/scripts/swWizard/swWizardDialog.as",
+		"/C/Users/marcus/Documents/clients/chris/ffdec_11.2.0/ex/scripts/proxyserver_ejb/swScriptDataBean.as",
+		"/C/Users/marcus/Documents/clients/chris/ffdec_11.2.0/ex/scripts/proxyserver_ejb/swScriptDataBeanModel.as",
+		"/C/SYMMWIN/frd/syscalls.frd",
+		"/C/Users/marcus/Documents/clients/chris/ffdec_11.2.0/ex/scripts/com/emc/ecuit/flex/components/wizards/ECUITWizardDialog.as",
+		"/C/Users/marcus/Documents/clients/chris/todo.txt",
+		"/C/Users/marcus/Documents/clients/chris/params",
+		"/C/Users/marcus/Documents/clients/chris/code/pyscripts/1firstbadallsteps.txt",
+		"/C/Users/marcus/Documents/clients/chris/192.168.177.49",
+		"/C/Users/marcus/Documents/clients/chris/code/pyscripts/allsteps2.log",
+		"/C/Users/marcus/Documents/clients/chris/code/pyscripts/half1one.log",
+		"/C/Users/marcus/Documents/clients/chris/SYMMWIN/frd/syscalls.frd",
+		"/C/Users/marcus/Documents/clients/chris/code/pyscripts/syscalls.txt",
+		"/C/Users/marcus/Documents/clients/chris/code/pyscripts/allsteplog.txt",
+		"/C/Users/marcus/Documents/clients/chris/code/pyscripts/analyze_packets.txt",
+		"/C/Users/marcus/Documents/clients/chris/code/pyscripts/half1_done_0.log",
+		"/C/Users/marcus/Documents/clients/chris/code/pyscripts/half1_before_init_mode.log",
+		"/C/Users/marcus/Documents/clients/chris/192.168.176.34_half1_log",
+		"/C/Users/marcus/Documents/clients/chris/code/pyscripts/packets_to_cpp.py",
+		"/C/Users/marcus/Documents/clients/chris/code/pyscripts/get_packets_from_log.py",
+		"/C/Users/marcus/Documents/clients/chris/code/pyscripts/cpp.txt",
+		"/C/Users/marcus/Documents/clients/chris/code/pyscripts/allstepsone_2.log",
+		"/C/Users/marcus/Documents/clients/chris/code/pyscripts/random_sys_calls.txt",
+		"/C/Users/marcus/Documents/clients/chris/code/pyscripts/random_calls_to_p.py",
+		"/C/Users/marcus/Documents/clients/chris/192.168.176.34_before_auto",
+		"/C/Users/marcus/Documents/clients/chris/code/pyscripts/half1_drive_in.log",
+		"/C/Users/marcus/Documents/clients/chris/192.168.176.34_drive_in",
+		"/C/Users/marcus/Documents/clients/chris/notes.txt",
+		"/C/Users/marcus/Documents/clients/chris/code/pyscripts/alldirs.txt",
+		"/C/Users/marcus/Documents/clients/chris/code/pyscripts/dir_hex_to_ip.py",
+		"/C/Users/marcus/Documents/clients/chris/SYMMWIN/ucode/fibrcode.dat",
+		"/C/Users/marcus/Documents/clients/chris/code/symmwinclone/convertStream.py",
+		"/C/Users/marcus/Documents/clients/chris/code/pyscripts/format_sys_calls.py",
+		"/C/Users/marcus/Documents/clients/chris/code/pyscripts/qww.txt",
+		"/C/Users/marcus/Documents/clients/chris/code/pyscripts/disk_replace_steps",
+		"/C/Users/marcus/Documents/clients/chris/192.168.176.34",
+		"/C/Users/marcus/Documents/clients/chris/SYMMWIN/scripts/RestoreFromTemporarySparing_00000A0A/Impl.bin",
+		"/C/Users/marcus/Documents/clients/chris/code/pyscripts/allstepsone.log",
+		"/C/Users/marcus/Documents/clients/chris/SYMMWIN/frd/impl.frd",
+		"/C/Users/marcus/Documents/clients/chris/SYMMWIN/frd/imp4573a.frd",
+		"/C/Users/marcus/Documents/clients/chris/SYMMWIN/frd/silreq.frd",
+		"/C/Users/marcus/Documents/clients/chris/SYMMWIN/ucode/d80f.bin",
+		"/C/Users/marcus/Documents/clients/chris/code/pyscripts/steplog.txt",
+		"/C/Users/marcus/Documents/clients/chris/SYMMWIN/frd/imp77040.frd",
+		"/C/Users/marcus/Documents/clients/chris/192.168.176.34_2",
+		"/C/Users/marcus/Documents/clients/chris/code/pyscripts/half1_done_2.log",
+		"/C/Users/marcus/Documents/clients/chris/random_syscalls.txt",
+		"/C/Users/marcus/Documents/clients/chris/192.168.176.34_done_1",
+		"/C/Users/marcus/Documents/clients/chris/192.168.176.34_done_2",
+		"/C/Users/marcus/Documents/clients/chris/192.168.176.34_done_0",
+		"/C/Users/marcus/Documents/clients/chris/SYMMWIN/data/ReplacedFrusDb.xm1",
+		"/C/Users/marcus/Documents/clients/chris/SYMMWIN/scripts/MemRpl7_0000086B/MemRpl7.DA1",
+		"/C/Users/marcus/Documents/clients/chris/SYMMWIN/data/SYMP_0008.DAT",
+		"/C/Users/marcus/Documents/clients/chris/SYMMWIN/frd/imp77039.frd",
+		"/C/Users/marcus/Documents/clients/chris/code/pyscripts/get_ips_from_log.py",
+		"/C/Users/marcus/Documents/clients/chris/code/pyscripts/step06.log",
+		"/C/Users/marcus/Documents/clients/chris/code/symmwinclone/sysCallInHeader.py",
+		"/C/Users/marcus/Documents/clients/chris/code/symmwinclone/packetHeader.py",
+		"/C/Users/marcus/Documents/clients/chris/code/pyscripts/allsteps.log",
+		"/C/Users/marcus/Documents/clients/chris/commwatc22h.log",
+		"/C/Users/marcus/Documents/clients/chris/code/symmwinclone/sysCall920E_01_03.py",
+		"/C/Users/marcus/Documents/clients/chris/code/symmwinclone/client.py",
+		"/C/Users/marcus/Documents/clients/chris/SYMMWIN/frd/scripts.frd",
+		"/C/Users/marcus/Documents/macollins/hair/hair info.txt",
+		"/C/Users/marcus/Documents/pas12.txt",
+		"/C/Users/marcus/Documents/clients/chris/code/symmwinclone/sysCallOutHeader.py",
+		"/C/Users/marcus/Documents/clients/chris/SYMMWIN/frd/base_step.frd"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 104.0,
+		"where_history":
+		[
+			"C:\\Users\\marcus\\Documents\\clients\\chris\\SYMMWIN\\",
+			"C:\\Users\\marcus\\Documents\\clients\\chris\\SYMMWIN\\frd"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Share",
+			"not found",
+			"class=\"fa",
+			"class=\"recommendations\">",
+			"class=\"fa",
+			"CIFS Generic share access valu",
+			"SAS Cabling Checks",
+			"shelf",
+			"<objectname>cifs</objectname>",
+			"<objectname>cifs",
+			"<counter-data>",
+			"nfs_read_latency",
+			"<objectname>volume</objectname>",
+			"nfs_read_latency",
+			"nts_read_latency",
+			"nfs_read_latency",
+			"nfs_.+_ops",
+			"nfs_x_ops",
+			"<objectname>nfs</objectname>",
+			"cifs_read_ops",
+			"<objectname>cifs</objectname>",
+			"cifs_read_ops",
+			"<objectname>cifs</objectname>",
+			"cifs_read_ops",
+			"cifs",
+			"<name>cifs_read_ops</name><value>",
+			"cifs_read_ops",
+			"cpu_busy",
+			"data_disk_util_percnt_histo",
+			"cpu_busy",
+			"cifs_read_ops",
+			"data_disk_util_percnt_histo",
+			"cpu_busy",
+			"2197666735751",
+			"cpu_busy",
+			"shelf1",
+			"shelf6",
+			"shelf10",
+			"shelf20",
+			"shelf30",
+			"3d",
+			"Shelf: 0",
+			"Shelf ",
+			"3d",
+			"shelf6",
+			">-->\n",
+			"shelf_name",
+			"chassisPort_blue",
+			"COLLATE utf8_bin",
+			"920C_19_00",
+			"920D_11_01",
+			"01536B84",
+			"01 53 6B 84",
+			"print",
+			"8145_01_01",
+			"454E5654",
+			"9A,",
+			"D2,",
+			"d2",
+			"D2",
+			"F7A",
+			"f7a",
+			"spindle",
+			"D2",
+			"9203_02_08",
+			"StepEng: [DiskRepl] -- start step",
+			"9220_23_00",
+			"175",
+			"9220_23_00",
+			"92 20",
+			"9220_23_00",
+			"F7A",
+			"F7 A",
+			"F7A",
+			"8123_00_01",
+			"EB 6F 41 F7",
+			"EA C6 3A D8",
+			"8123_00_01",
+			"FEB6F41F7",
+			"0100000FEB6F41F7",
+			"8123_00_01",
+			"DA02 C0:05",
+			"binary",
+			"VENDOR INFORMATION:",
+			"binary",
+			"308F7B0E",
+			"BA,F000F,F000F",
+			"binary",
+			"5BD10780",
+			"binary",
+			"A7,C,23D,1",
+			"920C_C0_00",
+			"0210",
+			"24D",
+			"5F905F0E",
+			"24D",
+			"5BD10780",
+			"101023D",
+			"<symm_number>",
+			"101023D",
+			"CommSysc Syscall ",
+			"  +",
+			"24 Oct 2018 ..:..:..\\....",
+			"Line ....: ",
+			"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ...",
+			"9b,",
+			"inline",
+			"9237_02_00",
+			"920B",
+			"4E 52 44 59",
+			"920C_C2_00",
+			"0101",
+			"0101_00_00",
+			"84003F07",
+			"8145_01_01",
+			"922A_81",
+			"922A_81_00",
+			"StepEng: [DiskRepl] -- start step",
+			"binary",
+			"84003F07",
+			"518F7B0E",
+			"binary",
+			"218F7B0E",
+			"18F7B0E",
+			"84003F07",
+			"9B006E09",
+			"758F7B0E",
+			"17 CE 03 06 92 03"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"toWrite +=",
+			" ",
+			"",
+			" ",
+			"",
+			"= 0x%s",
+			"bp2",
+			"L",
+			"I",
+			"B",
+			"l",
+			"bp",
+			"&gt;",
+			"&lt;"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/marcus/Documents/todo.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 425,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								51,
+								51
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 126.0
+	},
+	"pinned_build_system": "",
+	"project": "ficrohard.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 199.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
