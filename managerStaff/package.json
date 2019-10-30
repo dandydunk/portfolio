@@ -18,7 +18,7 @@
     "express-session": "^1.11.3",
     "jade": "^1.11.0",
     "mongodb": "^2.0.33",
-    "mongoose": "^4.0.5",
+    "mongoose": "^5.7.7",
     "multer": "^0.1.8",
     "node-geocoder": "^2.21.2",
     "passport": "^0.2.2"
